@@ -1,5 +1,7 @@
 package esercitazione_v2;
 
+import java.util.Scanner;
+
 public class Conto {
     private Persona p;
     private String codiceIBAN;
@@ -54,12 +56,42 @@ public class Conto {
         this.cassa = cassa;
     }
 
-    public void deposito(float importo_da_depositare){
+    public void deposito(float importo_da_depositare) {
         cassa = cassa + importo_da_depositare;
     }
 
-    public void prelievo(float importo_da_prelevare){
-        cassa = cassa - importo_da_prelevare;
+    public void prelievo(float importo_da_prelevare) {
+        try {
+            if (importo_da_prelevare > this.cassa) {
+                System.out.println("Mi dispiace ma l'importo eccede il tuo credito residuo.");
+            } else {
+                cassa = cassa - importo_da_prelevare;
+                System.out.println("Prelievo effettuato correttamente !");
+                System.out.println("Il tuo saldo corrente è: " + cassa);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+    public void prelievoInterattivo() {
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("Inserisci l'importo che vuoi prelevare: ");
+
+        // String input
+        float importo_prelievo = myObj.nextFloat();
+
+        if (importo_prelievo > this.cassa) {
+            System.out.println("Mi dispiace ma l'importo eccede il tuo credito residuo.");
+        } else {
+            cassa = cassa - importo_prelievo;
+            System.out.println("Prelievo effettuato correttamente !");
+            System.out.println("Il tuo saldo corrente è: " + cassa);
+        }
+
+
     }
 
     @Override
