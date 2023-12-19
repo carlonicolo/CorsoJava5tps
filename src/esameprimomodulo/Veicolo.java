@@ -1,5 +1,5 @@
 // Aggiungere il nome del package utilizzato
-// package ...;
+package esameprimomodulo;
 
 /*
 La classe veicolo, che definisce un veicolo con le seguenti
@@ -26,5 +26,26 @@ public class Veicolo {
     //public Veicolo(int ..., String ...){}
 
     // Aggiungere metodi accessori get e set
+    // Costruttore con parametri
+    public Veicolo(int numMatricola, String proprietario){
+        this.numMatricola = numMatricola;
+        this.proprietario = proprietario;
+    }
+
+    public void setProprietario(String nome) {
+        proprietario = nome;
+    }
+
+    public String getProprietario() {
+        return proprietario;
+    }
+
+    public void setMatricola(int matricola) {
+        numMatricola = matricola;
+    }
+
+    public int getMatricola() {
+        return numMatricola;
+    }
 
 }  // fine classe Veicolo

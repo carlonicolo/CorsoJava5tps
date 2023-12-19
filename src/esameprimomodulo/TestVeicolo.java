@@ -1,5 +1,5 @@
 // Aggiungere il nome del package utilizzato
-// package ...;
+package esameprimomodulo;
 
 /*
   Questa classe testa le classi Veicolo, Auto, Moto e Camion.

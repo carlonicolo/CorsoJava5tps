@@ -1,5 +1,5 @@
 // Aggiungere il nome del package utilizzato
-// package ...;
+package esameprimomodulo;
 
 /*
   La classe Auto eredita dalla classe Veicolo e aggiunge una caratteristica
@@ -14,9 +14,11 @@ public class Auto extends Veicolo {
 
     public void setTipo(String mioTipo) {
       // da completare
+        tipo = mioTipo;
     }
 
     public String getTipo() {
       // da completare
+        return tipo;
     }
 }

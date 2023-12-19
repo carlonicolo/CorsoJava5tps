@@ -1,5 +1,5 @@
 // Aggiungere il nome del package utilizzato
-// package ...;
+package esameprimomodulo;
 
 /*
   La classe Moto eredita dalla classe Veicolo e aggiunge una caratteristica
@@ -13,5 +13,12 @@ public class Moto extends Veicolo {
 
     // TODO - STEP 2
     // Aggiungere metodi accessori get e set
+    public void setNumPosti(int numPt) {
+        numPosti = numPt;
     }
+
+    public int getNumPosti() {
+        return numPosti;
+    }
+
 }
