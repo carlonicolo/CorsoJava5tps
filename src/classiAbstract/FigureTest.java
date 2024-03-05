@@ -28,7 +28,7 @@ public class FigureTest {
         int i;
         double areaTot = 0.0;
         for (i=0; i<a.length; i++){
-            System.out.println("Area elemento " + i + " è " + a[i].area() );
+            System.out.println("Area elemento " + i + " di " + a[i].myname() + " è " + a[i].area() );
             areaTot += a[i].area();
         }
         return areaTot;
@@ -38,5 +38,9 @@ public class FigureTest {
         FigureTest ft = new FigureTest();
         ft.creaFigure(10);
         System.out.println("Area totale = " + ft.calcolaArea());
-    }
+
+        Circle c1 = new Circle(20);
+        System.out.println(c1.getName());
+
+    };;
 }
